@@ -1,0 +1,17 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="900" fill="#F8FAFC"/>
+<circle cx="990" cy="145" r="70" fill="#F59E0B"/>
+<path d="M0 700L1200 600V900H0V700Z" fill="#E4EEF4"/>
+<g transform="translate(110 175)">
+<rect x="0" y="120" width="455" height="300" fill="#071B33"/>
+<rect x="18" y="138" width="419" height="264" fill="#0B74D1"/>
+<g stroke="#A5DBF5" stroke-width="5"><path d="M123 138V402M228 138V402M333 138V402"/><path d="M18 226H437M18 314H437"/></g>
+<rect x="520" y="35" width="250" height="455" rx="16" fill="#102D4D"/>
+<path d="M645 142L606 210H643L625 270L694 196H655L672 142H645Z" fill="#F59E0B"/>
+<rect x="820" y="120" width="190" height="300" rx="20" fill="white" stroke="#C9D7E1" stroke-width="5"/>
+<rect x="850" y="160" width="130" height="68" rx="8" fill="#071B33"/>
+<circle cx="915" cy="320" r="50" fill="#EFF6FB"/>
+<path d="M915 288L891 332H913L902 365L945 319H922L933 288H915Z" fill="#0B74D1"/>
+</g>
+<text x="80" y="810" fill="#071B33" font-family="Arial, sans-serif" font-weight="800" font-size="44">PCG SOLAR • COMPLETE ENERGY KIT</text>
+</svg>

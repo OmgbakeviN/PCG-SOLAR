@@ -1,0 +1,14 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="900" fill="#EDF5FA"/>
+<circle cx="975" cy="150" r="68" fill="#F59E0B"/>
+<path d="M0 700L1200 620V900H0V700Z" fill="#DBE9F2"/>
+<g transform="translate(350 120)">
+<rect width="500" height="610" rx="30" fill="white" stroke="#CAD7E0" stroke-width="5"/>
+<rect x="64" y="62" width="372" height="142" rx="16" fill="#071B33"/>
+<text x="100" y="122" fill="#FFFFFF" font-family="Arial" font-size="24" font-weight="700">HYBRID INVERTER</text>
+<text x="100" y="164" fill="#F59E0B" font-family="Arial" font-size="42" font-weight="800">5 kW</text>
+<path d="M250 270C172 270 108 334 108 412C108 490 172 554 250 554C328 554 392 490 392 412C392 334 328 270 250 270Z" fill="#EFF6FB" stroke="#D4E3ED" stroke-width="4"/>
+<path d="M250 322L204 405H247L225 484L307 385H263L284 322H250Z" fill="#0B74D1"/>
+</g>
+<text x="80" y="810" fill="#071B33" font-family="Arial, sans-serif" font-weight="800" font-size="44">PCG SOLAR • HYBRID INVERTER</text>
+</svg>

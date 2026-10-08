@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #071b33;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #ffb30f;
+  color: #071b33;
+}
+
+@layer components {
+  .container-pcg {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-pcg-blue;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply block h-[2px] w-8 bg-pcg-solar;
+  }
+
+  .section-title {
+    @apply max-w-3xl text-3xl font-extrabold leading-tight tracking-[-0.035em] text-pcg-ink sm:text-4xl lg:text-5xl;
+  }
+
+  .section-copy {
+    @apply max-w-2xl text-base leading-7 text-slate-600 sm:text-lg;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-pcg-solar px-6 py-3.5 text-sm font-extrabold text-pcg-ink transition hover:-translate-y-0.5 hover:bg-pcg-amber focus:outline-none focus:ring-4 focus:ring-pcg-solar/25;
+  }
+}

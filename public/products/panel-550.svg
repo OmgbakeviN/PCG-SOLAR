@@ -1,0 +1,15 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="900" fill="#EEF6FB"/>
+<circle cx="965" cy="145" r="72" fill="#F59E0B"/>
+<path d="M0 700L1200 610V900H0V700Z" fill="#DCEAF3"/>
+<g transform="translate(188 185) rotate(-5 420 260)">
+<rect x="0" y="0" width="820" height="510" fill="#071B33"/>
+<rect x="26" y="26" width="768" height="458" fill="#0B74D1"/>
+<g stroke="#98D7F5" stroke-width="7" opacity=".8">
+<path d="M154 26V484M282 26V484M410 26V484M538 26V484M666 26V484"/>
+<path d="M26 140H794M26 254H794M26 368H794"/>
+</g>
+<path d="M205 510L145 680H205L295 510H205ZM615 510L700 680H760L700 510H615Z" fill="#60758C"/>
+</g>
+<text x="80" y="795" fill="#071B33" font-family="Arial, sans-serif" font-weight="800" font-size="44">PCG SOLAR • PHOTOVOLTAIC MODULE</text>
+</svg>

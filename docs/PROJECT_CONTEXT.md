@@ -121,3 +121,14 @@ L'accès à `/admin` ne repose plus uniquement sur la session visible côté Rea
 - La config de la branche Neon (`neon.ts`) est possédée par le workspace de l'utilisateur, non écrasée par les patchs ZIP ; le bucket doit être ajouté à la config existante ou provisionné dans Neon Console.
 - Ne **jamais** placer `AWS_SECRET_ACCESS_KEY`, `AWS_ACCESS_KEY_ID` ou `DATABASE_URL` dans un fichier `VITE_*`. La Function reçoit ses credentials de Neon.
 - Pour installer le backend, exécuter `npm install aws4fetch` dans le vrai projet. Le ZIP ne remplace pas `package.json`, car ce dernier peut contenir des dépendances installées localement depuis les patchs précédents.
+
+## V4.8 — Homepage direction Frontend Design (2026-10-15)
+- Méthode : Anthropic `frontend-design` via skills.sh. Conception intentionnelle avec une identité propre à PCG SOLAR.
+- Nouvelle homepage volontairement courte : hero photo terrain → à propos + humain → 3 produits Neon en vedette → prise de contact.
+- Titres de la homepage : `Barlow Condensed` ; police globale et admin : `Outfit` conservée.
+- Ne pas recréer de cards uniformes arrondies ou de sections génériques supplémentaires dans la homepage.
+- Les aperçus de produits ouvrent toujours `ProductQuickViewModal` et ses actions en bas ; les données passent toujours par `CatalogContext`/Neon.
+- `HomeMission.jsx` et `HomeValues.jsx` ne sont plus montés dans la homepage, mais restent dans le code sans changement.
+- Aucune modification des URLs/backend/sécurité ; ne pas placer de credentials dans les fichiers publics.
+- Photos Pexels dans `siteData.js` : remplaçables ultérieurement par des clichés de PCG SOLAR.
+- Documentation de design détaillée : `docs/HOMEPAGE_DESIGN_V4_8.md`.

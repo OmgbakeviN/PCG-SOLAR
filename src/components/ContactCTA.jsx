@@ -1,30 +1,38 @@
-import { ArrowRight, MessageCircle, PhoneCall } from 'lucide-react'
+import { ArrowUpRight, Mail } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { media } from '../data/siteData'
 
 export default function ContactCTA() {
   return (
-    <section id="contact" className="pb-24 sm:pb-28">
-      <div className="container-pcg">
-        <div className="grid overflow-hidden bg-pcg-solar lg:grid-cols-[1fr_auto] lg:items-end">
-          <div className="p-7 sm:p-10 lg:p-14">
-            <span className="text-xs font-black uppercase tracking-[0.18em] text-pcg-ink/55">Votre projet commence ici</span>
-            <h2 className="mt-4 max-w-3xl text-3xl font-black leading-tight tracking-[-0.045em] text-pcg-ink sm:text-4xl lg:text-5xl">
-              Parlons de votre consommation avant de parler de panneaux.
+    <section id="contact" className="pcg-home-contact" aria-labelledby="pcg-contact-title">
+      <div className="pcg-home-contact__main">
+        <div className="pcg-home-contact__content">
+          <div className="pcg-home-contact__copy">
+            <p className="pcg-home-kicker pcg-home-kicker--light">Parlons de votre installation</p>
+            <h2 id="pcg-contact-title" className="pcg-home-display pcg-home-section-title">
+              Un projet solaire commence par une conversation.
             </h2>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-pcg-ink/70">
-              Décrivez-nous votre besoin. L’équipe PCG SOLAR pourra ensuite vous orienter vers une étude et une solution adaptée.
+            <p>
+              Dites-nous ce que vous souhaitez alimenter. Nous vous aiderons
+              à identifier les équipements à considérer.
             </p>
+            <div className="pcg-home-contact__actions">
+              <a href="mailto:contact@pcgsolar.com?subject=Projet%20solaire%20PCG%20SOLAR" className="pcg-home-button pcg-home-button--solar">
+                <Mail aria-hidden="true" size={18} /> Nous écrire
+              </a>
+              <Link to="/boutique" className="pcg-home-text-link pcg-home-text-link--light">
+                Découvrir la boutique <ArrowUpRight aria-hidden="true" size={18} />
+              </Link>
+            </div>
           </div>
-
-          <div className="flex flex-col border-t border-pcg-ink/15 lg:min-w-[310px] lg:border-l lg:border-t-0">
-            <a href="mailto:contact@pcgsolar.com" className="inline-flex min-h-[92px] items-center justify-between gap-4 border-b border-pcg-ink/15 px-7 text-sm font-extrabold text-pcg-ink transition hover:bg-white/25">
-              <span className="inline-flex items-center gap-3"><MessageCircle size={18} /> Nous écrire</span>
-              <ArrowRight size={17} />
-            </a>
-            <a href="tel:+237000000000" className="inline-flex min-h-[92px] items-center justify-between gap-4 px-7 text-sm font-extrabold text-pcg-ink transition hover:bg-white/25">
-              <span className="inline-flex items-center gap-3"><PhoneCall size={18} /> Être rappelé</span>
-              <ArrowRight size={17} />
-            </a>
-          </div>
+        </div>
+        <div className="pcg-home-contact__photo">
+          <img
+            src={media.engineer}
+            alt="Professionnel intervenant sur un équipement énergétique"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </section>

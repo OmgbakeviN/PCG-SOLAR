@@ -1,35 +1,52 @@
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { media } from '../data/siteData'
 
+const equipment = [
+  'Panneaux solaires et kits',
+  'Batteries et stockage',
+  'Onduleurs et accessoires',
+]
+
 export default function HomeAbout() {
   return (
-    <section id="a-propos" className="bg-white py-20 sm:py-24">
-      <div className="container-pcg grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <div className="relative">
-          <img src={media.team} alt="Équipe travaillant autour d'une installation solaire" className="aspect-[4/3] w-full object-cover" />
-          <div className="absolute bottom-0 left-0 bg-pcg-solar px-6 py-4 text-sm font-extrabold text-pcg-ink">
-            Solutions solaires adaptées aux usages réels
-          </div>
+    <section id="a-propos" className="pcg-home-about" aria-labelledby="pcg-about-title">
+      <div className="container-pcg pcg-home-about__grid">
+        <div className="pcg-home-about__visual">
+          <img
+            src={media.team}
+            alt="Des professionnels interviennent sur un projet d’énergie solaire"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="pcg-home-about__visual-tag">Des solutions pensées pour vos usages</div>
         </div>
 
-        <div>
-          <span className="eyebrow">À propos de nous</span>
-          <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-[-0.035em] text-pcg-ink sm:text-4xl">
-            Produire, stocker et mieux utiliser votre énergie.
+        <div className="pcg-home-about__content">
+          <p className="pcg-home-kicker">PCG SOLAR, à vos côtés</p>
+          <h2 id="pcg-about-title" className="pcg-home-display pcg-home-section-title">
+            L'énergie juste, pour chaque besoin.
           </h2>
-          <p className="mt-6 text-base leading-7 text-slate-600">
-            PCG SOLAR accompagne les ménages, commerces et entreprises dans le choix de solutions solaires fiables. Notre objectif est simple : proposer des équipements cohérents avec le besoin, le budget et le niveau d'autonomie recherché.
+          <p className="pcg-home-about__lead">
+            Passer au solaire commence par de bonnes questions : quels appareils
+            alimenter, pendant combien de temps et avec quelle autonomie ?
           </p>
-          <div className="mt-7 space-y-3">
-            {['Panneaux solaires et kits', 'Batteries et stockage', 'Onduleurs et équipements', 'Accompagnement et installation'].map((item) => (
-              <p key={item} className="flex items-center gap-3 text-sm font-semibold text-pcg-ink">
-                <CheckCircle2 size={18} className="text-pcg-blue" /> {item}
-              </p>
+          <p className="pcg-home-about__copy">
+            PCG SOLAR accompagne particuliers et professionnels dans le choix
+            d'équipements photovoltaïques cohérents avec leurs usages et leur budget.
+          </p>
+
+          <div className="pcg-home-about__equipment" aria-label="Types de produits">
+            {equipment.map((item) => (
+              <div key={item} className="pcg-home-about__equipment-row">
+                <span>{item}</span>
+                <span aria-hidden="true" className="pcg-home-about__equipment-line" />
+              </div>
             ))}
           </div>
-          <Link to="/boutique" className="mt-8 inline-flex items-center gap-2 text-sm font-extrabold text-pcg-blue hover:text-pcg-ink">
-            Explorer la boutique <ArrowRight size={17} />
+
+          <Link to="/boutique" className="pcg-home-text-link pcg-home-text-link--dark">
+            Explorer les équipements <ArrowUpRight aria-hidden="true" size={18} />
           </Link>
         </div>
       </div>

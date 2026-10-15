@@ -1,38 +1,47 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowUpRight, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { media } from '../data/siteData'
 
 export default function Hero() {
   return (
-    <section id="accueil" className="relative min-h-[650px] overflow-hidden bg-pcg-ink pt-[78px] text-white">
-      <div className="absolute inset-0">
+    <section id="accueil" className="pcg-home-hero" aria-labelledby="pcg-hero-title">
+      <div className="pcg-home-hero__photo" aria-hidden="true">
         <img
           src={media.hero}
-          alt="Installation de panneaux solaires"
-          className="h-full w-full object-cover object-center lg:object-[68%_center]"
+          alt=""
+          fetchPriority="high"
+          decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#06182c]/95 via-[#06182c]/78 to-[#06182c]/25" />
       </div>
+      <div className="pcg-home-hero__shade" aria-hidden="true" />
 
-      <div className="container-pcg relative flex min-h-[572px] items-center py-16">
-        <div className="max-w-[720px]">
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-pcg-solar">Énergie solaire • Cameroun</p>
-          <h1 className="mt-6 text-4xl font-extrabold leading-[1.02] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-            Une énergie fiable pour votre maison et votre activité.
-          </h1>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">
-            PCG SOLAR fournit des solutions photovoltaïques, batteries et équipements adaptés aux besoins des particuliers et des professionnels.
+      <div className="container-pcg pcg-home-hero__inner">
+        <div className="pcg-home-hero__content">
+          <p className="pcg-home-kicker pcg-home-kicker--light">
+            Pour les maisons, les commerces et les entreprises
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link to="/boutique" className="btn-primary">
-              Voir nos produits <ArrowRight size={17} />
+          <h1 id="pcg-hero-title" className="pcg-home-display pcg-home-hero__title">
+            Le solaire, pensé pour la vraie vie.
+          </h1>
+          <p className="pcg-home-hero__intro">
+            Panneaux, batteries, onduleurs et kits solaires : des équipements
+            pour construire un projet adapté à vos besoins.
+          </p>
+          <div className="pcg-home-hero__actions">
+            <Link to="/boutique" className="pcg-home-button pcg-home-button--solar">
+              Découvrir nos produits <ArrowUpRight aria-hidden="true" size={19} />
             </Link>
-            <a href="#a-propos" className="inline-flex items-center justify-center border border-white/35 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-pcg-ink">
-              Découvrir PCG SOLAR
+            <a className="pcg-home-text-link pcg-home-text-link--light" href="#contact">
+              Parler de mon projet <ArrowUpRight aria-hidden="true" size={18} />
             </a>
           </div>
         </div>
       </div>
+
+      <a className="pcg-home-hero__scroll" href="#a-propos" aria-label="Découvrir PCG SOLAR">
+        <ChevronDown aria-hidden="true" size={22} />
+      </a>
+      <p className="pcg-home-hero__caption">Une énergie qui accompagne vos journées.</p>
     </section>
   )
 }

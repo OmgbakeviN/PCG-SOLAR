@@ -131,3 +131,13 @@
 - Renforcement de `.gitignore` pour les configurations locales Vercel/Neon.
 - Ajout de `docs/DEPLOYMENT_VERCEL.md` : GitHub, Vercel, environnements, Auth, validation backend production, recette et sécurité.
 - Aucun changement aux composants React, au schéma PostgreSQL ou au backend Neon.
+
+## V4.8 — Redesign homepage selon frontend-design (2026-10-15)
+- Référence de méthode étudiée : https://www.skills.sh/anthropics/skills/frontend-design.
+- Redesign exclusif de la page d'accueil : hero photographique plus assumé, présentation éditoriale très courte, sélection produits et CTA final. Suppression de deux sections répétitives sur l'accueil (mission et valeurs), sans supprimer leurs anciens composants.
+- Barlow Condensed sur les grands titres de la homepage ; Outfit conservée pour le corps du site, la boutique et l'administration.
+- Palette fidèle au logo PCG SOLAR ; pas de chiffres ni références client fictifs, pas de multiplication de cards arrondies.
+- Sélection produits réellement issue de Neon via `useCatalog()` ; accès à la modal produit existante ; chargement, absence de produits vedettes et erreur réseau traités.
+- Nouveau CSS uniquement sous `.pcg-home` pour ne pas changer les pages existantes.
+- Aucune modification backend, Auth, stockage, API, fichier de secrets ou configuration Vercel.
+- Détail de la direction visuelle : `docs/HOMEPAGE_DESIGN_V4_8.md`.
